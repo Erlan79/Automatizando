@@ -1,10 +1,14 @@
 import automatizado.page.GooglePO;
+import org.junit.FixMethodOrder;
+import org.junit.runners.MethodSorters;
+import org.openqa.selenium.WebDriver;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 
 import static org.junit.Assert.assertTrue;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GoogleTest extends BaseTest {
 
     private static GooglePO googlePage;

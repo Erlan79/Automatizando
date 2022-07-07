@@ -5,6 +5,8 @@
   <artifactId>automatizado</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
+  <name>automatizado</name>
+  <url>http://maven.apache.org</url>
 
   <!-- Arquivo de propriedades do projeto -->
 
@@ -14,9 +16,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
-  <name>automatizado</name>
-  <url>http://maven.apache.org</url>
+
   <dependencies>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
