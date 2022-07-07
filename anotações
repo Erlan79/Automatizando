@@ -18,3 +18,5 @@ Passo a passo para criação de testes automatizados.
         2.4.5 Não deve logar no sistema com e-mail correto e senha incorreta. - OK
         2.4.6 Não deve logar no sistema com e-mail incorreto e senha correta. - OK
         2.4.7 Deve logar no sistema com e-mail e senha corretos. - OK
+
+3º
