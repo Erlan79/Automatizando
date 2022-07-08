@@ -45,7 +45,6 @@ public class LoginTest extends BaseTest {
         assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
     }
 
-
     @Test
     public void TC004_naoDeveLogarNoSistemaComEmailIncorretoESenhaIncorreta(){
 

@@ -6,8 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public abstract class BaseTest {
 
     protected static WebDriver driver;
-    private static final String URL_BASE = "C:\\Users\\Erlã\\OneDrive\\Documentos\\Automatizando\\sistema\\login.html";
-    private static final String CAMINHO_DRIVER = "C:\\Users\\Erlã\\IdeaProjects\\Automatizando\\src\\resource\\chromedriver-v10305060.exe";
+    private static final String URL_BASE = "C:/Users/erla.santos/Documents/QA/Automatizando/sistema/login.html";
+    private static final String CAMINHO_DRIVER = "C:\\Users\\erla.santos\\IdeaProjects\\Automatizado\\automatizado\\src\\resource\\chromedriver-v10305060.exe";
 
     // Encapsulamento
     @BeforeClass
