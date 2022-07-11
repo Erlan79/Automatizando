@@ -57,18 +57,51 @@ public class ControleDeProdutoTest extends BaseTest {
     @Test
     public void TC003_NaoDeveSerPossivelCadastrarUmProdutoSemPreencherTodosOsCampos(){
 
+        String mensagem = "Todos os campos são obrigatórios para o cadastro!";
         controleProdutoPage.buttonAdicionar.click();
         controleProdutoPage.buttonAdicionar.click();
 
-        ProdutoBuilder produtoBuilder = new ProdutoBuilder();
+        // Aqui cria o objeto para adicionar na tela
+        ProdutoBuilder produtoBuilder = new ProdutoBuilder(controleProdutoPage);
 
-        controleProdutoPage.cadastrarProduto(produtoBuilder);
+        // Aqui estamos testando se o produto é adicionado sem código
+        produtoBuilder
+           .adicionarCodigo("")
+           .builder();
+
+        assertEquals(mensagem, controleProdutoPage.spanMensagem.getText());
+
+        // Aqui estamos testando se o produto é adicionado sem quantidade
+        produtoBuilder
+           .adicionarCodigo("00005")
+           .adicionarQuantidade(null)
+           .builder();
+
+        assertEquals(mensagem, controleProdutoPage.spanMensagem.getText());
+
+        // Aqui estamos testando se o produto é adicionado sem nome
+        produtoBuilder
+           .adicionarNome("")
+           .adicionarQuantidade(10)
+           .builder();
 
         // Aqui vamos capturar a mensagem de erro.
 
-        String mensagem = controleProdutoPage.spanMensagem.getText();
+        assertEquals(mensagem, controleProdutoPage.spanMensagem.getText());
 
-        assertEquals("Todos os campos são obrigatórios para o cadastro!", mensagem);
+        // Aqui estamos testando se o produto é adicionado sem valor
+        produtoBuilder
+           .adicionarNome("Cimento")
+           .adicionarValor(null)
+           .builder();
+
+        // Aqui estamos testando se o produto é adicionado sem data
+        produtoBuilder
+           .adicionarValor(50.0)
+           .adicionarData("")
+           .builder();
+
+        assertEquals(mensagem, controleProdutoPage.spanMensagem.getText());
     }
 
 }

@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 public class ProdutoBuilder {
 
-    public String codigo = "00001";
-    public String nome = "Produto Padrão";
-    public Integer quantidade = 1;
-    public Double valor = 1.0;
-    public String data = "08/07/2022";
+    private String codigo = "00001";
+    private String nome = "Produto Padrão";
+    private Integer quantidade = 1;
+    private Double valor = 1.0;
+    private String data = "08/07/2022";
 
     private ControleDeProdutoPO controleDeProdutoPO;
 
@@ -45,8 +45,8 @@ public class ProdutoBuilder {
     public void builder(){
         controleDeProdutoPO.escrever(controleDeProdutoPO.inputCodigo, codigo);
         controleDeProdutoPO.escrever(controleDeProdutoPO.inputNome, nome);
-        controleDeProdutoPO.escrever(controleDeProdutoPO.inputQuantidade, quantidade.toString());
-        controleDeProdutoPO.escrever(controleDeProdutoPO.inputValor, valor.toString());
+        controleDeProdutoPO.escrever(controleDeProdutoPO.inputQuantidade, (quantidade != null) ? quantidade.toString() : "");
+        controleDeProdutoPO.escrever(controleDeProdutoPO.inputValor, (valor != null) ? valor.toString() :"");
         controleDeProdutoPO.escrever(controleDeProdutoPO.inputData, data);
 
         controleDeProdutoPO.buttonSalvar.click();

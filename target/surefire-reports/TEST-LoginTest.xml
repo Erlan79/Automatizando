@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="GoogleTest" time="4.523" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="LoginTest" time="1.218" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="18.0.1.1+2-6"/>
@@ -61,6 +61,11 @@
     <property name="sun.stdout.encoding" value="cp850"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="GoogleTest" name="TC001_devePesquisarNoGoogleOTextoBatataFrita" time="2.587"/>
-  <testcase classname="GoogleTest" name="TC002_devePesquisarNoGoogleOTextoNutella" time="1.936"/>
+  <testcase classname="LoginTest" name="TC001_naoDeveLogarNoSistemaComEmailESenhaVazios" time="0.202"/>
+  <testcase classname="LoginTest" name="TC002_naoDeveLogarNoSistemaComEmailIncorretoESenhaVazia" time="0.152"/>
+  <testcase classname="LoginTest" name="TC003_naoDeveLogarNoSistemaComEmailVazioESenhaIncorreta" time="0.15"/>
+  <testcase classname="LoginTest" name="TC004_naoDeveLogarNoSistemaComEmailIncorretoESenhaIncorreta" time="0.163"/>
+  <testcase classname="LoginTest" name="TC005_naoDeveLogarNoSistemaComEmailCorretoESenhaIncorreta" time="0.172"/>
+  <testcase classname="LoginTest" name="TC006_naoDeveLogarNoSistemaComEmailIncorretoESenhaCorreta" time="0.172"/>
+  <testcase classname="LoginTest" name="TC007_DeveLogarNoSistemaComEmailESenhaCorretos" time="0.207"/>
 </testsuite>
