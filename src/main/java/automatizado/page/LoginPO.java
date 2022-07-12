@@ -1,13 +1,12 @@
 package automatizado.page;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPO extends BasePO {
 
-    // pageFactory
+    //#region Região dos WebElements
     @FindBy(id = "email")
     public WebElement inputEmail;
 
@@ -20,6 +19,10 @@ public class LoginPO extends BasePO {
     @FindBy(id = "mensagem")
     public WebElement spanMensagem;
 
+    //#endregion Região dos WebElements
+
+
+    //#region Construtor
     /**
      * Construtor padrão para criação de uma nova instancia da página de login.
      *
@@ -28,7 +31,14 @@ public class LoginPO extends BasePO {
     public LoginPO(WebDriver driver) {
         super(driver);
     }
+    //#endregion Construtor
 
+
+    //#region Região dos métodos
+    /**
+     * Método que obtem a mensagem disparada na tela.
+     * @return Texto da mensagem.
+     */
     public String obterMensagem() {
         return spanMensagem.getText();
     }
@@ -43,4 +53,5 @@ public class LoginPO extends BasePO {
         escrever(inputSenha, senha);
         buttonEntrar.click();
     }
+    //endregion Região dos métodos
 }

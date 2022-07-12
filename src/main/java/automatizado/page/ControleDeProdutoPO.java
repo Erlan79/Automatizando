@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class ControleDeProdutoPO extends BasePO{
 
+    //#region WebElements
     @FindBy(id = "btn-adicionar")
     public WebElement buttonAdicionar;
 
@@ -40,7 +41,10 @@ public class ControleDeProdutoPO extends BasePO{
 
     @FindBy(id = "mensagem")
     public WebElement spanMensagem;
+    //#endregion WebElements
 
+
+    //#region Construtor
     /**
      * Construtor base para criação da fábrica de elementos.
      *
@@ -49,7 +53,9 @@ public class ControleDeProdutoPO extends BasePO{
     public ControleDeProdutoPO(WebDriver driver) {
         super(driver);
     }
+    //#endregion
 
+    //#region Métodos
     public void cadastrarProduto(
             String codigo,
             String nome,
@@ -70,4 +76,5 @@ public class ControleDeProdutoPO extends BasePO{
 
         produtoBuilder.builder();
     }
+    //#endregion
 }
